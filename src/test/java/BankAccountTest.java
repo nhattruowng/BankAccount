@@ -59,17 +59,17 @@ public class BankAccountTest {
         Assert.assertEquals(account.getBalance(), 110.0, "Balance after adding interest should be 110.0");
     }
 
-//    @Test
-//    public void testTransactionHistory() {
-//        account.deposit(50.0);
-//        account.withdraw(30.0);
-//        account.addInterest(10.0);
-//        List<String> history = account.getTransactionHistory();
-//        Assert.assertEquals(history.size(), 4, "Transaction history should have 4 entries");
-//        Assert.assertTrue(history.get(1).contains("Deposited: 50.0"), "Second entry should be deposit");
-//        Assert.assertTrue(history.get(2).contains("Withdrew: 30.0"), "Third entry should be withdrawal");
-//        Assert.assertTrue(history.get(3).contains("Interest added"), "Fourth entry should be interest");
-//    }
+    @Test
+    public void testTransactionHistory() {
+        account.deposit(50.0);
+        account.withdraw(30.0);
+        account.addInterest(10.0);
+        List<String> history = account.getTransactionHistory();
+        Assert.assertEquals(history.size(), 4, "Transaction history should have 4 entries");
+        Assert.assertTrue(history.get(1).contains("Deposited: 50.0"), "Second entry should be deposit");
+        Assert.assertTrue(history.get(2).contains("Withdrew: 30.0"), "Third entry should be withdrawal");
+        Assert.assertTrue(history.get(3).contains("Interest added"), "Fourth entry should be interest");
+    }
     
     ///C
 }
